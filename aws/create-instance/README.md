@@ -106,3 +106,40 @@ Note: You didn't specify an "-out" parameter to save this plan, so Terraform
 can't guarantee that exactly these actions will be performed if
 "terraform apply" is subsequently run.
 ```
+#### >	terraform apply
+```
+aws_instance.example: Creating...
+  ami:                          "" => "ami-40d28157"
+  arn:                          "" => "<computed>"
+  associate_public_ip_address:  "" => "<computed>"
+  availability_zone:            "" => "<computed>"
+  cpu_core_count:               "" => "<computed>"
+  cpu_threads_per_core:         "" => "<computed>"
+  ebs_block_device.#:           "" => "<computed>"
+  ephemeral_block_device.#:     "" => "<computed>"
+  get_password_data:            "" => "false"
+  instance_state:               "" => "<computed>"
+  instance_type:                "" => "t2.micro"
+  ipv6_address_count:           "" => "<computed>"
+  ipv6_addresses.#:             "" => "<computed>"
+  key_name:                     "" => "<computed>"
+  network_interface.#:          "" => "<computed>"
+  network_interface_id:         "" => "<computed>"
+  password_data:                "" => "<computed>"
+  placement_group:              "" => "<computed>"
+  primary_network_interface_id: "" => "<computed>"
+  private_dns:                  "" => "<computed>"
+  private_ip:                   "" => "<computed>"
+  public_dns:                   "" => "<computed>"
+  public_ip:                    "" => "<computed>"
+  root_block_device.#:          "" => "<computed>"
+  security_groups.#:            "" => "<computed>"
+  source_dest_check:            "" => "true"
+  subnet_id:                    "" => "<computed>"
+  tenancy:                      "" => "<computed>"
+  volume_tags.%:                "" => "<computed>"
+  vpc_security_group_ids.#:     "" => "<computed>"
+aws_instance.example: Still creating... (10s elapsed)
+aws_instance.example: Still creating... (20s elapsed)
+aws_instance.example: Creation complete after 26s (ID: i-00b83b73f5689e018)
+```
