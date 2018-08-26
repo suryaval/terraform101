@@ -143,3 +143,34 @@ aws_instance.example: Still creating... (10s elapsed)
 aws_instance.example: Still creating... (20s elapsed)
 aws_instance.example: Creation complete after 26s (ID: i-00b83b73f5689e018)
 ```
+
+#### Added Tag and terraform plan
+```
+$ terraform plan
+Refreshing Terraform state in-memory prior to plan...
+The refreshed state will be used to calculate this plan, but will not be
+persisted to local or remote state storage.
+
+aws_instance.example: Refreshing state... (ID: i-00b83b73f5689e018)
+
+------------------------------------------------------------------------
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  ~ update in-place
+
+Terraform will perform the following actions:
+
+  ~ aws_instance.example
+      tags.%:    "0" => "1"
+      tags.Name: "" => "terraform-example"
+
+
+Plan: 0 to add, 1 to change, 0 to destroy.
+
+------------------------------------------------------------------------
+
+Note: You didn't specify an "-out" parameter to save this plan, so Terraform
+can't guarantee that exactly these actions will be performed if
+"terraform apply" is subsequently run.
+```
