@@ -7,4 +7,4 @@ before_install:
 
 script:
   - ls -ltr
-  - terraform plan suryaval/terraform101/aws/create-ec2
+  - terraform plan ./aws/create-ec2/
