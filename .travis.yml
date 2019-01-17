@@ -5,6 +5,12 @@ before_install:
   - mv /tmp/terraform ~/bin
   - export PATH="~/bin:$PATH"
 
+# Initialize terraform
+before_script:
+  - cd ./aws/create-ec2/
+  - terraform init
+
+# Execute plan for tf
 script:
   - ls -ltr
   - terraform plan ./aws/create-ec2/
