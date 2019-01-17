@@ -9,6 +9,7 @@ before_install:
 before_script:
   - cd ./aws/create-ec2/
   - terraform init
+  - cd - #go-back to the root level of the directory
 
 # Execute plan for tf
 script:
