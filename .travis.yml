@@ -5,4 +5,6 @@ before_install:
   - mv /tmp/terraform ~/bin
   - export PATH="~/bin:$PATH"
 
-script: terraform plan ./aws/create-ec2
+script:
+  - ls -ltr
+  - terraform plan suryaval/terraform101/aws/create-ec2
