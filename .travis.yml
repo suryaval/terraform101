@@ -15,4 +15,5 @@ before_install:
 script:
   - cd ./aws/create-ec2 && terraform init
   - ls -ltr
-  - terraform plan
+#  - terraform plan # commenting this because sensitive information like Access Key & Secret Access Key cannot be exposed in GitHub
+# Try to find out dynamic credential passing mechanisms or plugins like what Jenkins supports today
